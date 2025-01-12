@@ -8,16 +8,12 @@
         alert(input.value);
         try {
             await $fetch('api/generate',{method:'POST',body:JSON.stringify({prompt:input.value,otherParams:params})})
-                .then( res => {
-                    response.value = res;
-                    alert('Test2: '+response.value)
-                })
-                .catch( err => {
-                    alert(err)
-                })
-        } catch (error) {
-            alert(error)
-        }
+        .then(res=>{
+          response.value=res;
+          alert('Test1: '+response.value)
+        })
+        .catch(err=>{alert(err)})
+      }catch(error){alert(error)}
     }
 </script>
 
