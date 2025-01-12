@@ -9,12 +9,11 @@
             await $fetch('/api/generate', { method: 'POST', body: JSON.stringify({ prompt : input.value, otherParams : params }) })
                 .then( res => {
                     response.value = res;
-                    alert(res)
+                    alert(response)
                 })
                 .catch( err => {
                     alert(err)
                 })
-            ;
         } catch (error) {
             alert(error)
         }
