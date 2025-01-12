@@ -2,9 +2,7 @@ import { Configuration, OpenAIApi } from "openai";
 const runtimeConfig = useRuntimeConfig();
 const { OPENAI_API_KEY } = runtimeConfig;
 if(! OPENAI_API_KEY){alert("No zOpenAI API key found. Please set the OPENAI_API_KEY environment variable.")}
-const configuration = new Configuration({
-    // apiKey: OPENAI_API_KEY,
-});
+const configuration = new Configuration({apiKey:OPENAI_API_KEY});
 const openai = new OpenAIApi(configuration);
 type otherParams = {
     model: string,
@@ -36,4 +34,5 @@ export default defineEventHandler( async (event) => {
     const { prompt, otherParams } = body;
     const response = await getPromptResponse(prompt, otherParams);
     return response;
+    alert(response)
 })
