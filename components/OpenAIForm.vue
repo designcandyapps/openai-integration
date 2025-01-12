@@ -11,11 +11,11 @@
                     response.value = res;
                 })
                 .catch( err => {
-                    console.log(err)
+                    alert(err)
                 })
             ;
         } catch (error) {
-            console.error(error)
+            alert(error)
         }
     }
 </script>
