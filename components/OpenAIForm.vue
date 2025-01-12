@@ -5,11 +5,12 @@
     const response = ref(null);
     const formSubmit = async (e) => {
         e.preventDefault();
+        alert(e);
         try {
             await $fetch('/api/generate', { method: 'POST', body: JSON.stringify({ prompt : input.value, otherParams : params }) })
                 .then( res => {
                     response.value = res;
-                    alert(response)
+                    alert(response.value)
                 })
                 .catch( err => {
                     alert(err)
