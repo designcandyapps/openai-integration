@@ -34,5 +34,5 @@ export default defineEventHandler( async (event) => {
     const { prompt, otherParams } = body;
     const response = await getPromptResponse(prompt, otherParams);
     return response;
-    alert(response)
+    alert('Test: '+response)
 })
