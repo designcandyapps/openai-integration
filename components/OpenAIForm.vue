@@ -7,10 +7,10 @@
         e.preventDefault();
         alert(e);
         try {
-            await $fetch('/api/generate', { method: 'POST', body: JSON.stringify({ prompt : input.value, otherParams : params }) })
+            await $fetch('/api/generate',{method:'POST',body:JSON.stringify({prompt:input.value,otherParams:params})})
                 .then( res => {
                     response.value = res;
-                    alert(response.value)
+                    alert('Test2: '+response.value)
                 })
                 .catch( err => {
                     alert(err)
