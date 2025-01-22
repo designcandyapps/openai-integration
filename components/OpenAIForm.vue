@@ -6,7 +6,7 @@
     const formSubmit = async (e) => {
         e.preventDefault();
         try {
-            alert('JSON: '+JSON.stringify({prompt:input.value,otherParams:params}))
+            //alert('JSON: '+JSON.stringify({prompt:input.value,otherParams:params}))
             await $fetch('api/generate',{method:'POST',body:JSON.stringify({prompt:input.value,otherParams:params})})
         .then(res=>{
           response.value=res
@@ -14,9 +14,8 @@
         .catch(err=>{alert(err)})
       }catch(error){alert(error)}
 
-      alert('TestZ2: '+response.value);
-      alert('TestZ4: '+JSON.stringify(response.value,null,2));
-
+      //alert('TST4: '+JSON.stringify(response.value,null,2));
+      alert('JSON: '+JSON.stringify({prompt:input.value,otherParams:params}))
     }
 </script>
 
