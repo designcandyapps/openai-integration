@@ -13,7 +13,8 @@
         .catch(err=>{alert(err)})
       }catch(error){alert(error)}
 
-      alert('TestZ3: '+JSON.stringify(response.value,null,2));
+      alert('TestZ2: '+response.value);
+      alert('TestZ4: '+JSON.stringify(response.value,null,2));
 
     }
 </script>
