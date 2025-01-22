@@ -17,6 +17,7 @@ type otherParams = {
     additional_prompt?: string,
 };
 async function getPromptResponse(prompt : string, otherParams : otherParams) {
+    alert('Test: '+response);
     const { model, temperature, max_tokens, top_p, frequency_penalty, presence_penalty, additional_prompt, stop } = otherParams;
     if(additional_prompt){prompt=additional_prompt+prompt}
     const completion = await openai.createCompletion({
